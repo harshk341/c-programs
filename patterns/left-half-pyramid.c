@@ -3,24 +3,23 @@
 int main()
 {
 
-    int num;
+    int rows;
 
-    printf("Enter a number:\n");
-    scanf("%d", &num);
+    printf("Enter the number of rows:\n");
+    scanf("%d", &rows);
 
-    for (int i = 1; i <= num; i++)
+    for (int i = 0; i < rows; i++)
     {
-        for (int j = 1; j <= num; j++)
+        for (int j = 0; j < rows - i - 1; j++)
         {
-            if (num - j >= i)
-            {
-                printf(" ");
-            }
-            else
-            {
-                printf("*");
-            }
+            printf("  ");
         }
+
+        for (int k = 0; k <= i; k++)
+        {
+            printf("* ");
+        }
+
         printf("\n");
     }
 
